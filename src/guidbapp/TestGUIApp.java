@@ -40,6 +40,37 @@ class GUIDbApp{
         frmMain.add(lblcname);
         frmMain.add(txtcname);
         
+        //We will create curdpanel
+        pnlCrud = new JPanel();
+        pnlCrud.setBorder(BorderFactory.createTitledBorder("CRUD Panel"));
+        
+        //Now we will create crud buttons to be hosted into the crud panel
+        btnInsert = new JButton();
+        btnInsert.setText("Insert");
+        
+        btnUpdate = new JButton();
+        btnUpdate = new JButton("Update");
+
+        btnDelete = new JButton();
+        btnDelete = new JButton("Delete");
+
+        btnSearch = new JButton();
+        btnSearch = new JButton("Search");
+
+        btnClear = new JButton();
+        btnClear = new JButton("Clear");
+
+
+        //Now we'll add crud buttons to the crud panel
+        pnlCrud.add(btnInsert);
+        pnlCrud.add(btnUpdate);
+        pnlCrud.add(btnDelete);
+        pnlCrud.add(btnSearch);
+        pnlCrud.add(btnClear);
+
+        //Now we'll add the panel into the main frame
+        frmMain.add(pnlCrud);
+
         //Decoration of frame
         frmMain.setTitle("CRM Window App Version 1.0");
         frmMain.setSize(700, 500);
